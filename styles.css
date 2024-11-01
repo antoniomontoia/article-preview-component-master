@@ -112,44 +112,58 @@ h1, p, time {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.container .container__section1__3 {
+.container .container__section1__2 .container__section1__2svgcontainer-horizontal {
+  width: 2rem;
+  height: 2rem;
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 1rem;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+}
+.container .container1__3hidden {
+  display: none;
+}
+.container .container1__3hidden .container__section1__3 {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: hsl(217, 19%, 35%);
-  padding: 1.25rem 1.75rem;
+  padding: 1.6rem 1.75rem;
   justify-content: space-between;
   border-radius: 0 0 0.75rem 0.75rem;
-  visibility: collapse;
-  position: absolute;
 }
-.container .container__section1__3 .hidden {
+.container .container1__3hidden .container__section1__3 .hidden {
   display: none;
 }
-.container .container__section1__3 .container__section1__3share {
+.container .container1__3hidden .container__section1__3 .container__section1__3share {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-.container .container__section1__3 .container__section1__3share p {
+.container .container1__3hidden .container__section1__3 .container__section1__3share p {
   color: hsl(212, 23%, 69%);
   font-size: 0.8125rem;
   letter-spacing: 5pt;
 }
-.container .container__section1__3 .container__section1__3share .media_buttons {
+.container .container1__3hidden .container__section1__3 .container__section1__3share .media_buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
-.container .container__section1__3 .container__section1__3share .media_buttons img {
+.container .container1__3hidden .container__section1__3 .container__section1__3share .media_buttons img {
   height: 22px;
 }
-.container .container__section1__3 .container__section1__3share .media_buttons .twitter {
+.container .container1__3hidden .container__section1__3 .container__section1__3share .media_buttons .twitter {
   height: 1.125rem;
 }
-.container .container__section1__3 .container__section1__3svgcontainer {
+.container .container1__3hidden .container__section1__3 .container__section1__3svgcontainer {
   width: 2rem;
   height: 2rem;
   background-color: hsl(212, 18%, 51%);
@@ -158,27 +172,90 @@ h1, p, time {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.container .container__section1__3 .container__section1__3svgcontainer img {
+.container .container1__3hidden .container__section1__3 .container__section1__3svgcontainer img {
   color: white;
 }
 
 @media (min-width: 57.8125rem) {
   .container {
-    flex-direction: row;
-    max-width: 50.9375rem;
+    display: grid;
+    grid-template-areas: "image description";
+    grid-template-columns: 2fr 3fr;
+    max-width: 47.5rem;
   }
   .container .container__img {
-    height: 18.75rem;
+    height: 100%;
     margin: 0;
     border-radius: 0.5rem 0 0 0.5rem;
+    grid-area: image;
   }
   .container .container__section1 {
-    gap: 1.25rem;
+    grid-area: description;
   }
   .container .container__section1 h1 {
     font-size: 1.25rem !important;
-    line-height: 150%;
+    line-height: 140%;
     letter-spacing: 0.2pt;
+  }
+  .container .container__section1 .container__section1__1 {
+    margin-bottom: 0.5rem;
+  }
+  .container .container__section1 .container__section1__2 .container__section1__2svgcontainer {
+    display: none;
+  }
+  .container .container__section1 .container__section1__2 .container__section1__2svgcontainer-horizontal {
+    display: flex;
+  }
+  .container .container__section1 .container__section1__2 .container__section1__2svgcontainer-click {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: hsl(212, 18%, 51%);
+    border-radius: 1rem;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .container .container1__3hidden {
+    display: none;
+  }
+  .container__overlay {
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: hsl(217, 19%, 35%);
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    right: 211px;
+    top: 235px;
+  }
+  .container__overlay p {
+    color: hsl(212, 23%, 69%);
+    font-size: 0.8125rem;
+    letter-spacing: 5pt;
+  }
+  .container__overlay .media_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container__overlay .media_buttons img {
+    height: 22px;
+  }
+  .container__overlay .media_buttons .twitter {
+    height: 1.125rem;
+  }
+  .triangle {
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 13px solid hsl(217, 19%, 35%);
+    left: 7.25rem;
+    bottom: -0.8rem;
   }
 }/*# sourceMappingURL=styles.css.map */

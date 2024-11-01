@@ -134,6 +134,20 @@ $lightgrayishblue:hsl(210, 46%, 95%);
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
+        }
+
+        .container__section1__2svgcontainer-horizontal {
+          width: 2rem;
+          height: 2rem;
+          background-color: $lightgrayishblue;
+          border-radius: 1rem;
+          align-self: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          display: none;
+          cursor: pointer;
         }
     }
 
@@ -145,7 +159,7 @@ $lightgrayishblue:hsl(210, 46%, 95%);
         flex-direction: row;
         align-items: center;
         background-color: $darkgrayishblue;
-        padding: 1.25rem 1.75rem;
+        padding: 1.6rem 1.75rem;
         justify-content: space-between;
         border-radius: 0 0 .75rem 0.75rem;
 
@@ -189,6 +203,7 @@ $lightgrayishblue:hsl(210, 46%, 95%);
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
 
           img {
             color: white;
@@ -204,22 +219,53 @@ $lightgrayishblue:hsl(210, 46%, 95%);
   @media (min-width: 57.8125rem) {
 
     .container {
-      flex-direction: row;
+      display: grid;
+      grid-template-areas: "image description";
+      grid-template-columns: 2fr 3fr;
       max-width: 47.5rem;
 
         .container__img {
-          height: 16.75rem;
+          height: 100%;
           margin: 0;
           border-radius: 0.5rem 0 0 0.5rem;
+          grid-area: image;
         }
 
       .container__section1 { 
+        grid-area: description;
 
         h1 {
           font-size: 1.25rem !important;
           line-height: 140%;
           letter-spacing: .2pt;
         } 
+
+        .container__section1__1 {
+          margin-bottom: .5rem;
+        }
+
+        .container__section1__2 {
+
+          .container__section1__2svgcontainer {
+            display: none;
+          }
+
+          .container__section1__2svgcontainer-horizontal {
+            display: flex;
+          }
+
+          .container__section1__2svgcontainer-click {
+            display: none;
+            width: 2rem;
+            height: 2rem;
+            background-color: hsl(212, 18%, 51%);
+            border-radius: 1rem;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+          }
+        }
 
       }
 
@@ -228,6 +274,46 @@ $lightgrayishblue:hsl(210, 46%, 95%);
       }
     }
 
+    .container__overlay {
+      position: absolute;
+      display: none;
+      flex-direction: row;
+      gap: 1rem;
+      background-color: $darkgrayishblue;
+      padding: 1rem 2rem;
+      border-radius: .75rem;
+      right: 211px;
+      top: 235px;
+    
+      p {
+        color: $grayishblue;
+        font-size: .8125rem;
+        letter-spacing: 5pt;
+      }
+
+      .media_buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+          height: 22px;
+        }
+
+        .twitter {
+          height: 1.125rem;
+        }
+    }
     
   }
 
+  .triangle {
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 13px solid hsl(217, 19%, 35%);
+    left: 7.25rem;
+    bottom: -0.8rem;
+  } 
+}
