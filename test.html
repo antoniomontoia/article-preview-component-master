@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay Div on Image Click</title>
+    <style>
+        #divBase {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            position: relative; /* Set position to relative for absolute positioning of overlay */
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        #targetDiv {
+            display: none; /* Initially hidden */
+            position: absolute; /* Position it absolutely within the base div */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width of the base div */
+            height: 100%; /* Full height of the base div */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white; /* Text color */
+            padding: 20px;
+            box-sizing: border-box; /* Include padding in width/height */
+        }
+    </style>
+</head>
+<body>
+
+<div id="divBase">
+    <h2>Base Div</h2>
+    <p>This is the base div. Click the image to see the overlay.</p>
+    <div id="imageDiv">
+        <img src="your-image-url.jpg" alt="Click me" id="clickableImage" style="cursor: pointer;">
+    </div>
+    <div id="targetDiv">
+        This is the overlay div that appears when the image is clicked!
+    </div>
+</div>
+
+<script>
+    // Get references to the image and the target div
+    const clickableImage = document.getElementById('clickableImage');
+    const targetDiv = document.getElementById('targetDiv');
+
+    // Add a click event listener to the image
+    clickableImage.addEventListener('click', function() {
+        // Toggle the display property of the target div
+        if (targetDiv.style.display === 'none' || targetDiv.style.display === '') {
+            targetDiv.style.display = 'block'; // Show the overlay div
+        } else {
+            targetDiv.style.display = 'none'; // Hide the overlay div
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* ## Colors */
+
+$darkgrayishblue: hsl(217, 19%, 35%);
+$desatdarkblue: hsl(214, 17%, 51%);
+$grayishblue: hsl(212, 23%, 69%);
+$lightgrayishblue:hsl(210, 46%, 95%);
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $lightgrayishblue;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  h1, p, time {
+    font-family: 'Manrope' ;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7vw;
+    border-radius: .75rem;
+    background-color: white;
+    max-width: 23.125rem;
+
+    .container__img {
+        border-radius: .75rem .75rem 0 0;
+          }
+
+    .container__section1 {
+        display: flex;
+        flex-direction: column;
+
+        .container__section1__1 {
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            margin: 1.5rem 1.75rem;
+
+        h1 {
+            font-size: 1.0625rem;
+            color: $darkgrayishblue;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: .8125rem;
+            color: $desatdarkblue;
+            font-weight: 600;
+            line-height: 175%;
+        }
+
+        }
+
+    }
+
+    .container__section1__2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1.25rem 1.75rem;
+
+        .container__section1__2__1 {
+            display: flex;
+            flex-direction: row;
+
+            .container__section1__2img1 {
+                width: 2.625rem;
+                border-radius: 1.75rem;
+                margin-right: 1rem;
+            }
+
+            .container__section1__2avatar {
+                .name {
+                    font-size: .8125rem;
+                    font-weight: 800;
+                    color: $darkgrayishblue;
+
+                }
+
+                time {
+                    font-size: .8125rem;
+                    font-weight: 500;
+                    color: $grayishblue;
+                }
+            }         
+        
+        }
+
+        .container__section1__2svgcontainer {
+            width: 2rem;
+            height: 2rem;
+            background-color: $lightgrayishblue;
+            border-radius: 1rem;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .container1__3hidden {
+      display: none;
+
+      .container__section1__3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $darkgrayishblue;
+        padding: 1.25rem 1.75rem;
+        justify-content: space-between;
+        border-radius: 0 0 .75rem 0.75rem;
+
+        .hidden {
+          display: none;
+        }
+
+        .container__section1__3share {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+        
+          p {
+            color: $grayishblue;
+            font-size: .8125rem;
+            letter-spacing: 5pt;
+          }
+
+          .media_buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+              height: 22px;
+            }
+
+            .twitter {
+              height: 1.125rem;
+            }
+          }
+        }
+
+        .container__section1__3svgcontainer {
+          width: 2rem;
+          height: 2rem;
+          background-color: hsl(212, 18%, 51%);
+          border-radius: 1rem;
+          align-self: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            color: white;
+          }
+        }
+      }
+    }
+
+
+  }
+
+      
+  @media (min-width: 57.8125rem) {
+
+    .container {
+      flex-direction: row;
+      max-width: 47.5rem;
+
+        .container__img {
+          height: 16.75rem;
+          margin: 0;
+          border-radius: 0.5rem 0 0 0.5rem;
+        }
+
+      .container__section1 { 
+
+        h1 {
+          font-size: 1.25rem !important;
+          line-height: 140%;
+          letter-spacing: .2pt;
+        } 
+
+      }
+
+      .container1__3hidden {
+        display: none;
+      }
+    }
+
+    
+  }
+
