@@ -18,6 +18,13 @@ svgContainer2.addEventListener('click', () => {
 
 svgContainer3.addEventListener('click', () => {
     overlay.style.display = 'flex';
+    svgContainer3.style.display = 'none';
+    svgContainer4.style.display = 'flex';
+})
 
+svgContainer4.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    svgContainer3.style.display = 'flex';
+    svgContainer4.style.display = "none";
 })
 ;

@@ -120,11 +120,13 @@ h1, p, time {
   background-color: hsl(210, 46%, 95%);
   border-radius: 1rem;
   align-self: center;
-  display: flex;
   justify-content: center;
   align-items: center;
   display: none;
   cursor: pointer;
+}
+.container .container__section1__2 .container__section1__2svgcontainer-click {
+  display: none;
 }
 .container .container1__3hidden {
   display: none;
@@ -176,6 +178,9 @@ h1, p, time {
 }
 .container .container1__3hidden .container__section1__3 .container__section1__3svgcontainer img {
   color: white;
+}
+.container .container__overlay {
+  display: none;
 }
 
 @media (min-width: 57.8125rem) {
