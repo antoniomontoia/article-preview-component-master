@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/antoniomontoia/article-preview-component-master)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution](https://github.com/antoniomontoia/article-preview-component-master)
+- [Live Site](https://antoniomontoia.github.io/article-preview-component-master/m)
 
 ## My process
 
