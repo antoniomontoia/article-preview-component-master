@@ -18,6 +18,10 @@ $lightgrayishblue:hsl(210, 46%, 95%);
     margin: 0;
   }
   
+  body, html {
+    min-height: 100vh;
+  }
+
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -60,6 +64,7 @@ $lightgrayishblue:hsl(210, 46%, 95%);
     border-radius: .75rem;
     background-color: white;
     max-width: 23.125rem;
+    box-shadow: 9px 7px 19px 9px rgb(128 113 113 / 10%);
 
     .container__img {
         border-radius: .75rem .75rem 0 0;
@@ -73,7 +78,8 @@ $lightgrayishblue:hsl(210, 46%, 95%);
             display: flex;
             flex-direction: column;
             gap: .75rem;
-            margin: 1.5rem 1.75rem;
+            margin: 1.5rem 2rem;
+            margin-bottom: .5rem;
 
         h1 {
             font-size: 1.0625rem;
@@ -96,7 +102,7 @@ $lightgrayishblue:hsl(210, 46%, 95%);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 1.25rem 1.75rem;
+        margin: 1.25rem 2rem;
 
         .container__section1__2__1 {
             display: flex;
@@ -228,7 +234,7 @@ $lightgrayishblue:hsl(210, 46%, 95%);
       display: grid;
       grid-template-areas: "image description";
       grid-template-columns: 2fr 3fr;
-      max-width: 47.5rem;
+      max-width: 49.5rem;
 
         .container__img {
           height: 100%;
@@ -247,10 +253,12 @@ $lightgrayishblue:hsl(210, 46%, 95%);
         } 
 
         .container__section1__1 {
-          margin-bottom: .5rem;
+          margin: 2rem 2.25rem;
+          margin-bottom: 0.5rem;
         }
 
         .container__section1__2 {
+          margin: 1.25rem 2.25rem;
 
           .container__section1__2svgcontainer {
             display: none;
@@ -269,6 +277,7 @@ $lightgrayishblue:hsl(210, 46%, 95%);
             align-self: center;
             justify-content: center;
             align-items: center;
+            position: relative;
             cursor: pointer;
           }
         }
@@ -288,8 +297,9 @@ $lightgrayishblue:hsl(210, 46%, 95%);
       background-color: $darkgrayishblue;
       padding: 1rem 2rem;
       border-radius: .75rem;
-      right: 211px;
-      top: 235px;
+      left: -114px;
+      bottom: 61px;       
+      width: max-content;
     
       p {
         color: $grayishblue;
@@ -322,4 +332,5 @@ $lightgrayishblue:hsl(210, 46%, 95%);
     left: 7.25rem;
     bottom: -0.8rem;
   } 
+
 }

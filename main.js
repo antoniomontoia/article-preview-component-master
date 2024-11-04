@@ -5,6 +5,8 @@ const svgContainer4 = document.querySelector('.container__section1__2svgcontaine
 const section2 = document.querySelector('.container__section1__2');
 const section3 =  document.querySelector('.container1__3hidden');
 const overlay = document.querySelector('.container__overlay')
+const mediaQuery = window.matchMedia ('max-width:  925px');
+
 
 svgContainer.addEventListener('click', () => {
     section2.style.display = 'none';
@@ -27,4 +29,3 @@ svgContainer4.addEventListener('click', () => {
     svgContainer3.style.display = 'flex';
     svgContainer4.style.display = "none";
 })
-;

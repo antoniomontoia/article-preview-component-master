@@ -11,6 +11,10 @@
   margin: 0;
 }
 
+body, html {
+  min-height: 100vh;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -53,6 +57,7 @@ h1, p, time {
   border-radius: 0.75rem;
   background-color: white;
   max-width: 23.125rem;
+  box-shadow: 9px 7px 19px 9px rgba(128, 113, 113, 0.1);
 }
 .container .container__img {
   border-radius: 0.75rem 0.75rem 0 0;
@@ -65,7 +70,8 @@ h1, p, time {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin: 1.5rem 1.75rem;
+  margin: 1.5rem 2rem;
+  margin-bottom: 0.5rem;
 }
 .container .container__section1 .container__section1__1 h1 {
   font-size: 1.0625rem;
@@ -82,7 +88,7 @@ h1, p, time {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1.25rem 1.75rem;
+  margin: 1.25rem 2rem;
 }
 .container .container__section1__2 .container__section1__2__1 {
   display: flex;
@@ -188,7 +194,7 @@ h1, p, time {
     display: grid;
     grid-template-areas: "image description";
     grid-template-columns: 2fr 3fr;
-    max-width: 47.5rem;
+    max-width: 49.5rem;
   }
   .container .container__img {
     height: 100%;
@@ -205,7 +211,11 @@ h1, p, time {
     letter-spacing: 0.2pt;
   }
   .container .container__section1 .container__section1__1 {
+    margin: 2rem 2.25rem;
     margin-bottom: 0.5rem;
+  }
+  .container .container__section1 .container__section1__2 {
+    margin: 1.25rem 2.25rem;
   }
   .container .container__section1 .container__section1__2 .container__section1__2svgcontainer {
     display: none;
@@ -222,6 +232,7 @@ h1, p, time {
     align-self: center;
     justify-content: center;
     align-items: center;
+    position: relative;
     cursor: pointer;
   }
   .container .container1__3hidden {
@@ -235,8 +246,10 @@ h1, p, time {
     background-color: hsl(217, 19%, 35%);
     padding: 1rem 2rem;
     border-radius: 0.75rem;
-    right: 211px;
-    top: 235px;
+    left: -114px;
+    bottom: 61px;
+    width: -moz-max-content;
+    width: max-content;
   }
   .container__overlay p {
     color: hsl(212, 23%, 69%);
