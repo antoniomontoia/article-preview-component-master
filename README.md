@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://github.com/antoniomontoia/article-preview-component-master)
-- [Live Site](https://antoniomontoia.github.io/article-preview-component-master/m)
+- [Live Site](https://antoniomontoia.github.io/article-preview-component-master)
 
 ## My process
 
